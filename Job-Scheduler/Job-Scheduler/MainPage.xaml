@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Job_Scheduler"
+             x:Class="Job_Scheduler.MainPage">
+
+    <StackLayout HorizontalOptions="Center" 
+                 VerticalOptions="Center" >
+        <Entry x:Name="entUser" Placeholder="Username"
+               Margin="10, 10, 10, 5" />
+        <Entry x:Name="entPassword" Placeholder="Password"
+               IsPassword="True" Margin="10, 5, 10, 5"/>
+
+        <Button x:Name="btnLogin" Text="Login" 
+                Margin="10, 5, 10, 10"
+                Clicked="btnLogin_Clicked"/>
+
+        <Label x:Name="msg"
+               Text= ""
+               TextColor="Red"
+               FontAttributes="Bold"
+               VerticalTextAlignment="Start"
+               HorizontalOptions="Center"/>
+    </StackLayout>
+
+</ContentPage>
