@@ -8,16 +8,18 @@ using Android.Widget;
 using Android.OS;
 using Firebase;
 using Firebase.Auth;
+using Android.Gms.Tasks;
+using Android.Support.Design.Widget;
 
 namespace Job_Scheduler.Droid
 {
     [Activity(Label = "Job_Scheduler", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, View.IOnClickListener,IOnCompleteListener
     {
         Button btnlogin;
         EditText input_email, input_password;
         TextView btnSignUp, btnForgotPassword;
-        RelativeLayout main;
+        RelativeLayout activity_main;
 
         public static FirebaseApp jobScheduler;
         FirebaseAuth auth;
@@ -35,6 +37,12 @@ namespace Job_Scheduler.Droid
             input_password = FindViewById<EditText>(Resource.Id.login_password);
             btnSignUp = FindViewById<TextView>(Resource.Id.login_btn_sign_up);
             btnForgotPassword = FindViewById<TextView>(Resource.Id.login_btn_forgot_password);
+            activity_main = FindViewById<RelativeLayout>(Resource.Id.activity_main);
+
+            btnSignUp.SetOnClickListener(this);
+            btnlogin.SetOnClickListener(this);
+            btnForgotPassword.SetOnClickListener(this);
+                
 
         }
 
@@ -48,6 +56,43 @@ namespace Job_Scheduler.Droid
             if (jobScheduler == null)
                 jobScheduler = FirebaseApp.InitializeApp(this, options);
             auth = FirebaseAuth.GetInstance(jobScheduler);
+        }
+
+        public void OnClick(View v)
+        {
+           if(v.Id == Resource.Id.login_btn_forgot_password)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(ForgotPassword)));
+                Finish();
+            }
+            else if (v.Id == Resource.Id.login_btn_sign_up)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(SignUp)));
+                Finish();
+            }
+            else if (v.Id == Resource.Id.login_btn_login)
+            {
+                LoginUser(input_email.Text, input_password.Text);
+            }
+        }
+
+        private void LoginUser(string email, string password)
+        {
+            auth.SignInWithEmailAndPassword(email, password).AddOnCompleteListener(this);
+        }
+
+        public void OnComplete(Task task)
+        {
+            if (task.IsSuccessful)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                Finish();
+            }
+            else
+            {
+                Snackbar snackBar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
+                snackBar.Show();
+            }
         }
     }
 }

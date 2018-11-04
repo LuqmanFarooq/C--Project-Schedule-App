@@ -3228,6 +3228,9 @@ namespace Job_Scheduler.Droid
 			// aapt resource value: 0x7f0c00a0
 			public const int activity_main = 2131493024;
 			
+			// aapt resource value: 0x7f0c00d6
+			public const int activity_sign_up = 2131493078;
+			
 			// aapt resource value: 0x7f0c002f
 			public const int add = 2131492911;
 			
@@ -3450,14 +3453,14 @@ namespace Job_Scheduler.Droid
 			// aapt resource value: 0x7f0c00a4
 			public const int login_password = 2131493028;
 			
-			// aapt resource value: 0x7f0c00da
-			public const int masked = 2131493082;
+			// aapt resource value: 0x7f0c00e3
+			public const int masked = 2131493091;
 			
 			// aapt resource value: 0x7f0c00c9
 			public const int media_actions = 2131493065;
 			
-			// aapt resource value: 0x7f0c00d8
-			public const int message = 2131493080;
+			// aapt resource value: 0x7f0c00e1
+			public const int message = 2131493089;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int middle = 2131492921;
@@ -3666,8 +3669,32 @@ namespace Job_Scheduler.Droid
 			// aapt resource value: 0x7f0c002d
 			public const int showTitle = 2131492909;
 			
-			// aapt resource value: 0x7f0c00d6
-			public const int sliding_tabs = 2131493078;
+			// aapt resource value: 0x7f0c00dc
+			public const int signup_btn_forgot_password = 2131493084;
+			
+			// aapt resource value: 0x7f0c00de
+			public const int signup_btn_login = 2131493086;
+			
+			// aapt resource value: 0x7f0c00db
+			public const int signup_btn_register = 2131493083;
+			
+			// aapt resource value: 0x7f0c00d8
+			public const int signup_email = 2131493080;
+			
+			// aapt resource value: 0x7f0c00d7
+			public const int signup_input_email = 2131493079;
+			
+			// aapt resource value: 0x7f0c00d9
+			public const int signup_input_password = 2131493081;
+			
+			// aapt resource value: 0x7f0c00dd
+			public const int signup_layout_or = 2131493085;
+			
+			// aapt resource value: 0x7f0c00da
+			public const int signup_password = 2131493082;
+			
+			// aapt resource value: 0x7f0c00df
+			public const int sliding_tabs = 2131493087;
 			
 			// aapt resource value: 0x7f0c0092
 			public const int smallLabel = 2131493010;
@@ -3750,8 +3777,8 @@ namespace Job_Scheduler.Droid
 			// aapt resource value: 0x7f0c0076
 			public const int title_template = 2131492982;
 			
-			// aapt resource value: 0x7f0c00d7
-			public const int toolbar = 2131493079;
+			// aapt resource value: 0x7f0c00e0
+			public const int toolbar = 2131493088;
 			
 			// aapt resource value: 0x7f0c0046
 			public const int top = 2131492934;
@@ -3789,8 +3816,8 @@ namespace Job_Scheduler.Droid
 			// aapt resource value: 0x7f0c0016
 			public const int view_offset_helper = 2131492886;
 			
-			// aapt resource value: 0x7f0c00d9
-			public const int visible = 2131493081;
+			// aapt resource value: 0x7f0c00e2
+			public const int visible = 2131493090;
 			
 			// aapt resource value: 0x7f0c00bb
 			public const int volume_item_container = 2131493051;
@@ -4087,16 +4114,19 @@ namespace Job_Scheduler.Droid
 			public const int select_dialog_singlechoice_material = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int support_simple_spinner_dropdown_item = 2130968641;
+			public const int SignUp = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int Tabbar = 2130968642;
+			public const int support_simple_spinner_dropdown_item = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int Toolbar = 2130968643;
+			public const int Tabbar = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int tooltip = 2130968644;
+			public const int Toolbar = 2130968644;
+			
+			// aapt resource value: 0x7f040045
+			public const int tooltip = 2130968645;
 			
 			static Layout()
 			{
