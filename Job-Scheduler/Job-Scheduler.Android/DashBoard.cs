@@ -31,7 +31,7 @@ namespace Job_Scheduler.Droid
             SetContentView(Resource.Layout.DashBoard);
 
             //Init Firebase
-            auth = FirebaseAuth.GetInstance(MainActivity.jobScheduler);
+            auth = FirebaseAuth.GetInstance(MainLoginPage.jobScheduler);
 
             //View
             txtWelcome = FindViewById<TextView>(Resource.Id.dashboard_welcome);

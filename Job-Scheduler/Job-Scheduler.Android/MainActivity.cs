@@ -13,85 +13,40 @@ using Android.Support.Design.Widget;
 
 namespace Job_Scheduler.Droid
 {
-    [Activity(Label = "Job_Scheduler", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, View.IOnClickListener,IOnCompleteListener
+    [Activity(Label = "MainActivity", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, View.IOnClickListener
     {
-        Button btnlogin;
-        EditText input_email, input_password;
-        TextView btnSignUp, btnForgotPassword;
+        Button manager_Login;
+        Button emp_login;
         RelativeLayout activity_main;
-
-        public static FirebaseApp jobScheduler;
-        FirebaseAuth auth;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.main);
-            // initialise firebase
-            InitFirebaseAuth();
 
-            // view
-            btnlogin = FindViewById<Button>(Resource.Id.login_btn_login);
-            input_email = FindViewById<EditText>(Resource.Id.login_email);
-            input_password = FindViewById<EditText>(Resource.Id.login_password);
-            btnSignUp = FindViewById<TextView>(Resource.Id.login_btn_sign_up);
-            btnForgotPassword = FindViewById<TextView>(Resource.Id.login_btn_forgot_password);
+            SetContentView(Resource.Layout.main);
+
+            //view
+            manager_Login = FindViewById<Button>(Resource.Id.manager_login_btn);
+            emp_login = FindViewById<Button>(Resource.Id.employee_login_btn);
             activity_main = FindViewById<RelativeLayout>(Resource.Id.activity_main);
 
-            btnSignUp.SetOnClickListener(this);
-            btnlogin.SetOnClickListener(this);
-            btnForgotPassword.SetOnClickListener(this);
-                
+            manager_Login.SetOnClickListener(this);
+            emp_login.SetOnClickListener(this);
 
-        }
-
-        private void InitFirebaseAuth()
-        {
-            var options = new FirebaseOptions.Builder()
-           .SetApplicationId("1:475218936925:android:6fa80ae367c1bd5a")
-           .SetApiKey("AIzaSyD0nxjUglD9RJSvg0GH3_cIwN5JG3dlJaA")
-           .Build();
-
-            if (jobScheduler == null)
-                jobScheduler = FirebaseApp.InitializeApp(this, options);
-            auth = FirebaseAuth.GetInstance(jobScheduler);
         }
 
         public void OnClick(View v)
         {
-           if(v.Id == Resource.Id.login_btn_forgot_password)
+            if (v.Id == Resource.Id.manager_login_btn)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(ForgotPassword)));
+                StartActivity(new Android.Content.Intent(this, typeof(ManagerLoginCode)));
                 Finish();
             }
-            else if (v.Id == Resource.Id.login_btn_sign_up)
+            else if (v.Id == Resource.Id.employee_login_btn)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(SignUp)));
+                StartActivity(new Android.Content.Intent(this, typeof(MainLoginPage)));
                 Finish();
-            }
-            else if (v.Id == Resource.Id.login_btn_login)
-            {
-                LoginUser(input_email.Text, input_password.Text);
-            }
-        }
-
-        private void LoginUser(string email, string password)
-        {
-            auth.SignInWithEmailAndPassword(email, password).AddOnCompleteListener(this);
-        }
-
-        public void OnComplete(Task task)
-        {
-            if (task.IsSuccessful)
-            {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
-                Finish();
-            }
-            else
-            {
-                Snackbar snackBar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
-                snackBar.Show();
             }
         }
     }

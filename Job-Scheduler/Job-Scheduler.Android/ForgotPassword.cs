@@ -33,7 +33,7 @@ namespace Job_Scheduler.Droid
             SetContentView(Resource.Layout.ForgotPassword);
 
             //Init Firebase
-            auth = FirebaseAuth.GetInstance(MainActivity.jobScheduler);
+            auth = FirebaseAuth.GetInstance(MainLoginPage.jobScheduler);
 
             //View
             input_email = FindViewById<EditText>(Resource.Id.forgot_email);

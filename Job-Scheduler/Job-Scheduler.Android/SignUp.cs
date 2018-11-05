@@ -33,7 +33,7 @@ namespace Job_Scheduler.Droid
             SetContentView(Resource.Layout.SignUp);
 
             //InitFirebase
-            auth = FirebaseAuth.GetInstance(MainActivity.jobScheduler);
+            auth = FirebaseAuth.GetInstance(MainLoginPage.jobScheduler);
 
             //View
             btnSignup = FindViewById<Button>(Resource.Id.signup_btn_register);
