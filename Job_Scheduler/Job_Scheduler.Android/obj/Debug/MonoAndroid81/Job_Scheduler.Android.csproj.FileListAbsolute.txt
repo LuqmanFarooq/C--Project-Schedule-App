@@ -1,0 +1,9 @@
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\Job_Scheduler.Android.csprojAssemblyReference.cache
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\res.flag
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\App.xaml.g.cs
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\MainPage.xaml.g.cs
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\managerLoginCode.xaml.g.cs
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\managerLogin.xaml.g.cs
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\managerDashboard.xaml.g.cs
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\createSchedule.xaml.g.cs
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.Android\obj\Debug\MonoAndroid81\Job_Scheduler.Android.csproj.CoreCompileInputs.cache

@@ -1,0 +1,1 @@
+D:\semester 1 mob app project\Job_Scheduler\Job_Scheduler\Job_Scheduler.UWP\Job_Scheduler.UWP.csproj;x86
