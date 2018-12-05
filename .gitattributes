@@ -5,10 +5,10 @@
 * text=auto
 
 # Force the following filetypes to have unix eols, so Windows does not break them
-*.* text eol=lf
+*.* text eol=crlf
 
 # Windows forced line-endings
-/.idea/* text eol=crlf
+/.idea/* text eol=lf
 
 #
 ## These files are binary and should be left untouched
