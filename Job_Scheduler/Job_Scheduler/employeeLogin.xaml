@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Job_Scheduler.employeeLogin">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image  Source="mainLogo.gif"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                VerticalOptions="Start" />
+            <Label x:Name="empLgn"
+               Text="Employee Login"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="Large"
+               Margin="10,10,10,30"/>
+            <Entry x:Name="empEmailInput"
+                   Placeholder="Enter Your Email"
+                   Keyboard="Email"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Margin="0,40,0,5"
+                   WidthRequest="200"/>
+            <Entry x:Name="empPasswordInput"
+                   Placeholder="Enter Your Password"
+                   IsPassword="True"
+                   MaxLength="15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="200"/>
+            <Button x:Name="empLoginBtn"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="Login"
+                TextColor="White"
+                FontAttributes="Bold"
+                BackgroundColor="DeepSkyBlue"
+                CornerRadius="12"
+                    Clicked="empLoginBtn_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

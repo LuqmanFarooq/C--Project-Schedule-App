@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Job_Scheduler.DataList">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Schedule" Text="Please find your schedule in the list below" TextColor="DeepSkyBlue"/>
+            <SearchBar x:Name="dataSearch" Placeholder="Search name"/>
+            <ListView x:Name="Datalist" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="MenuItem_Clicked" Command="{Binding .}" Text="Delete" IsDestructive="True"/>
+                            </ViewCell.ContextActions>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                <Label Text="Name: " FontSize="Medium"/>
+                                <Label Text="{Binding name}" FontSize="Medium" TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Date: " FontSize="Medium"/>
+                                    <Label Text="{Binding date}" FontSize="Medium" TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                        <Label Text="Start Time: " FontSize="Medium"/>
+                                        <Label Text="{Binding timeFrom}" FontSize="Medium" TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                            <Label Text="Finish Time: " FontSize="Medium"/>
+                                            <Label Text="{Binding timeTo}" FontSize="Medium" TextColor="Black"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

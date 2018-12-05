@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Job_Scheduler.createSchedule">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="makeNew"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Text="Create New Schedule"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="Large"
+               Margin="10,10,10,30"/>
+
+            <Label x:Name="empNameLbl"
+                   Text="Employee Name:"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="Small"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"/>
+            <Entry x:Name="empNameBox" 
+                   Placeholder="Enter Employee Name"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"/>
+
+            <Label x:Name="dateLbl" 
+                   Text="Date:"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="Small"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"/>
+            <DatePicker x:Name="selectDate" />
+            <Label x:Name="timeFromLbl" 
+                   Text="Shift Start Time"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="Small"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"/>
+            <TimePicker x:Name="selectFromTime" 
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"/>
+            <Label x:Name="timeToLbl" 
+                   Text="Shift Finish Time"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="Small"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Center"/>
+            <TimePicker x:Name="selectToTime"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"/>
+            <Button x:Name="addScheduleBtn"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="Add"
+                TextColor="White"
+                FontAttributes="Bold"
+                BackgroundColor="DeepSkyBlue"
+                CornerRadius="12"
+                    Clicked="addScheduleBtn_Clicked"/>
+                  </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
