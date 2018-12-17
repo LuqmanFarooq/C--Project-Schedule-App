@@ -25,6 +25,10 @@
       <DependentUpon>DataList.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DeleteSchedule.xaml.cs">
+      <DependentUpon>DeleteSchedule.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)employeeDashboard.xaml.cs">
       <DependentUpon>employeeDashboard.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -96,5 +100,11 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Assets\images\mainLogo.gif" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\images\splashscreenLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DeleteSchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

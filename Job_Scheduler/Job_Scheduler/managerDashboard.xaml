@@ -4,7 +4,7 @@
              x:Class="Job_Scheduler.managerDashboard">
     <ContentPage.Content>
         <StackLayout>
-            <Image  Source="mainLogo.gif"
+            <Image  Source="mainLogo.png"
                 WidthRequest="200"
            HorizontalOptions="Center"
            VerticalOptions="Start" />
@@ -26,15 +26,6 @@
                 BackgroundColor="DeepSkyBlue"
                 CornerRadius="12"
                     Clicked="createBtn_Clicked"/>
-            <Button x:Name="modiftBtn"
-                WidthRequest="200"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Text="Modify Existing Schedule"
-                TextColor="White"
-                FontAttributes="Bold"
-                BackgroundColor="DeepSkyBlue"
-                CornerRadius="12"/>
             <Button x:Name="deleteBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"
@@ -43,7 +34,8 @@
                 TextColor="White"
                 FontAttributes="Bold"
                 BackgroundColor="DeepSkyBlue"
-                CornerRadius="12"/>
+                CornerRadius="12"
+                    Clicked="deleteBtn_Clicked"/>
             <Button x:Name="ShowBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"

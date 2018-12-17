@@ -16,7 +16,8 @@ namespace Job_Scheduler
 	{
         public SQLiteConnection conn;
         public Add_Schedule add_Schedule;
-		public createSchedule ()
+        
+        public createSchedule ()
 		{
 			InitializeComponent ();
             conn = DependencyService.Get<ISQLite>().GetConnection();
@@ -33,6 +34,7 @@ namespace Job_Scheduler
             empNameBox.Text = "";
 
         }
-      
+        
+
     }
 }

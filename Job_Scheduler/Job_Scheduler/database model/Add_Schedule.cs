@@ -7,8 +7,7 @@ namespace Job_Scheduler.database_model
 {
    public class Add_Schedule
     {
-        [PrimaryKey]
-        [AutoIncrement]
+        [PrimaryKey,AutoIncrement]
         public int id { get; set; }
         public string name { get; set; }
         public string date { get; set; }

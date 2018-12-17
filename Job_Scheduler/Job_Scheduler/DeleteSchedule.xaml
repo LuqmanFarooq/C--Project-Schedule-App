@@ -1,19 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Job_Scheduler.DataList">
+             x:Class="Job_Scheduler.DeleteSchedule">
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="Schedule" Text="Please find your schedule in the list below" TextColor="DeepSkyBlue"/>
-            <SearchBar x:Name="dataSearch" Placeholder="Search name"/>
-            <ListView x:Name="Datalist" HasUnevenRows="True">
+            <ListView x:Name="delDatalist" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="Name: " FontSize="Medium"/>
-                                    <Label Text="{Binding name}" FontSize="Medium" TextColor="Black"/>
+                                    <Label Text="Id: " FontSize="Medium"/>
+                                    <Label Text="{Binding id}" FontSize="Medium" TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                <Label Text="Name: " FontSize="Medium"/>
+                                <Label Text="{Binding name}" FontSize="Medium" TextColor="Black"/>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Date: " FontSize="Medium"/>
@@ -32,6 +35,19 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Entry x:Name="delId"
+                   Placeholder="Enter id to delete that record"
+                   Keyboard="Numeric"/>
+            <Button x:Name="delBtn"
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="Delete"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BackgroundColor="DeepSkyBlue"
+                    CornerRadius="12"
+                    Clicked="delBtn_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

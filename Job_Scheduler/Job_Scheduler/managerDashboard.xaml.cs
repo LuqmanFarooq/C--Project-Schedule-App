@@ -29,5 +29,10 @@ namespace Job_Scheduler
         {
             Navigation.PushAsync(new DataList());
         }
+
+        private void deleteBtn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DeleteSchedule());
+        }
     }
 }

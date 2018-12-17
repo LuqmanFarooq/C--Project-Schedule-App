@@ -15,8 +15,8 @@ namespace Job_Scheduler
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DataList : ContentPage
 	{
-        private ObservableCollection<Add_Schedule> items = new ObservableCollection<Add_Schedule>();
         public SQLiteConnection conn;
+        
         public DataList ()
 		{
 			InitializeComponent ();
@@ -45,17 +45,6 @@ namespace Job_Scheduler
                 Datalist.ItemsSource = data.Where(x => x.name.ToLower().Contains(filter.ToLower()));
             }
             Datalist.EndRefresh();
-        }
-        public int DeleteDbItem(int id)
-        {
-            return this.conn.Delete<Add_Schedule>(Id);
-        }
-        private void MenuItem_Clicked(object sender, EventArgs e)
-        {
-            var item = (MenuItem)sender;
-            var dataModel = (Add_Schedule)item.CommandParameter;
-            this.items.Remove(dataModel);
-            DeleteDbItem(dataModel.id);
         }
     }
 }
