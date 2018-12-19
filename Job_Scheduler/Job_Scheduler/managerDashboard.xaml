@@ -9,11 +9,11 @@
                 WidthRequest="200"
            HorizontalOptions="Center"
            VerticalOptions="Start" />
-            <!-- Welcome message by the label -->
+            <!--  message by the label -->
             <Label x:Name="wlcmMsg"
                HorizontalOptions="Center"
                VerticalOptions="Center"
-               Text="Welcom to Scheduler"
+               Text="Scheduler"
                TextColor="Black"
                FontAttributes="Bold"
                FontSize="Large"

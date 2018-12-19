@@ -14,7 +14,7 @@
         <Label x:Name="appName"
                HorizontalOptions="Center"
                VerticalOptions="Center"
-               Text="Scheduler"
+               Text="Welcome To Scheduler"
                TextColor="Black"
                FontAttributes="Bold"
                FontSize="Large"
