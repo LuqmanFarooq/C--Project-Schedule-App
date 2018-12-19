@@ -16,9 +16,10 @@ namespace Job_Scheduler
 		{
 			InitializeComponent ();
 		}
-
+        // Login button clicked Functionality
         private void mngrLoginBtn_Clicked(object sender, EventArgs e)
         {
+            // empty entries validation
             bool isUserEmpty, isPwdEmpty;
             isUserEmpty = String.IsNullOrEmpty(mngrEmailInput.Text);
             isPwdEmpty = String.IsNullOrEmpty(mngrPasswordInput.Text);
@@ -29,9 +30,7 @@ namespace Job_Scheduler
             }
             else
             {
-                // check user/pwd hash keys etc
-                // navigate to new page
-                // use navigation service to go to ZodiacPage
+                // use navigation service to go to manager dashboard
                 Navigation.PushAsync(new managerDashboard());
             } // end if(isUserEmpty || isPwdEmpty)
         }

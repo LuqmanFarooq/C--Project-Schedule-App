@@ -4,11 +4,16 @@
              x:Class="Job_Scheduler.DeleteSchedule">
     <ContentPage.Content>
         <StackLayout>
+            <!-- Please find your schedule label -->
             <Label x:Name="Schedule" Text="Please find your schedule in the list below" TextColor="DeepSkyBlue"/>
+            <!-- Search bar to search from list -->
+            <SearchBar x:Name="dataSearch" Placeholder="Search name"/>
+            <!-- data list -->
             <ListView x:Name="delDatalist" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <!-- binded data stack -->
                             <StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Id: " FontSize="Medium"/>
@@ -35,9 +40,11 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <!-- entry box of id associated with the record to be deleted -->
             <Entry x:Name="delId"
                    Placeholder="Enter id to delete that record"
                    Keyboard="Numeric"/>
+            <!-- delete button to delete the record -->
             <Button x:Name="delBtn"
                     WidthRequest="200"
                     HorizontalOptions="Center"

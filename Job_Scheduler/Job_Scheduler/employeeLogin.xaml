@@ -4,10 +4,12 @@
              x:Class="Job_Scheduler.employeeLogin">
     <ContentPage.Content>
         <StackLayout>
+            <!-- Main App Logo -->
             <Image  Source="mainLogo.png"
                 WidthRequest="200"
                 HorizontalOptions="Center"
                 VerticalOptions="Start" />
+            <!-- Employee Login label -->
             <Label x:Name="empLgn"
                Text="Employee Login"
                HorizontalOptions="Center"
@@ -16,6 +18,7 @@
                FontAttributes="Bold"
                FontSize="Large"
                Margin="10,10,10,30"/>
+            <!-- Email Input Entry box -->
             <Entry x:Name="empEmailInput"
                    Placeholder="Enter Your Email"
                    Keyboard="Email"
@@ -23,6 +26,7 @@
                    VerticalOptions="Center"
                    Margin="0,40,0,5"
                    WidthRequest="200"/>
+            <!-- Password entry box -->
             <Entry x:Name="empPasswordInput"
                    Placeholder="Enter Your Password"
                    IsPassword="True"
@@ -30,6 +34,7 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    WidthRequest="200"/>
+            <!-- Login Button -->
             <Button x:Name="empLoginBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"
@@ -39,7 +44,7 @@
                 FontAttributes="Bold"
                 BackgroundColor="DeepSkyBlue"
                 CornerRadius="12"
-                    Clicked="empLoginBtn_Clicked"/>
+                Clicked="empLoginBtn_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

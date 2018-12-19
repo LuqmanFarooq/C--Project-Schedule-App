@@ -4,10 +4,12 @@
              x:Class="Job_Scheduler.managerLoginCode">
     <ContentPage.Content>
         <StackLayout>
+            <!-- Main App Logo -->
             <Image  Source="mainLogo.png"
                 WidthRequest="200"
                 HorizontalOptions="Center"
                 VerticalOptions="Start" />
+            <!-- Enter code to login as manager label -->
             <Label x:Name="entrCode"
                Text="Enter Code to Login as a Manager"
                HorizontalOptions="Center"
@@ -16,6 +18,7 @@
                FontAttributes="Bold"
                FontSize="Large"
                Margin="10,10,10,30"/>
+            <!-- Code entry box -->
             <Entry x:Name="codeInput"
                    Placeholder="Enter Code Here"
                    IsPassword="True"
@@ -23,6 +26,7 @@
                    MaxLength="4"
                    HorizontalOptions="Center"
                    WidthRequest="200"/>
+            <!--send coder or enter button -->
             <Button x:Name="sendCodeBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"
@@ -32,7 +36,7 @@
                 FontAttributes="Bold"
                 BackgroundColor="DeepSkyBlue"
                 CornerRadius="12"
-                    Clicked="sendCodeBtn_Clicked"/>
+                Clicked="sendCodeBtn_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

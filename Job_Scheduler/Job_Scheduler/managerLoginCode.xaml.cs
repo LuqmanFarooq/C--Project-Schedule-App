@@ -12,10 +12,11 @@ namespace Job_Scheduler
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class managerLoginCode : ContentPage
 	{
-        string preCodedCode ="6689";
+        // precoded code for testing ------------------------------------------------------------
+        /*string preCodedCode ="6689";
         bool emptUserCode;
-        string userCode;
-    
+        string userCode;*/
+        //---------------------------------------------------------------------------------------
         public managerLoginCode ()
 		{
 			InitializeComponent ();
@@ -23,7 +24,10 @@ namespace Job_Scheduler
 
         private void sendCodeBtn_Clicked(object sender, EventArgs e)
         {
-            emptUserCode = String.IsNullOrEmpty(codeInput.Text);
+            // for precoded code testing
+
+            //--------------------------------------------------------------------------------------
+            /*emptUserCode = String.IsNullOrEmpty(codeInput.Text);
             userCode = codeInput.Text;
             if(emptUserCode)
             {
@@ -34,7 +38,20 @@ namespace Job_Scheduler
                 Navigation.PushAsync(new managerLogin());
             }
             else
-                DisplayAlert("Error", "Wrong Code", "Try again");
+                DisplayAlert("Error", "Wrong Code", "Try again");*/
+            //--------------------------------------------------------------------------------------
+            // empty entries validation
+            bool isCodeEmpty;
+            isCodeEmpty = String.IsNullOrEmpty(codeInput.Text);
+            if (isCodeEmpty)
+            {
+                DisplayAlert("Error", "Cannot be empty", "Try again");
+            }
+            else
+            {
+                // use navigation service to go to manager Login page
+                Navigation.PushAsync(new managerLogin());
+            } // end if(isCodeEmpty)
         }
     }
 }

@@ -11,6 +11,7 @@ using Xamarin.Forms;
 [assembly:Dependency(typeof(SQLite_uwp))]
 namespace Job_Scheduler.UWP
 {
+    //sqlite uwp platform specific code
     public class SQLite_uwp : ISQLite
     {
         public SQLiteConnection GetConnection()

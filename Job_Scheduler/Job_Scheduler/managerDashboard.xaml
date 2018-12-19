@@ -4,10 +4,12 @@
              x:Class="Job_Scheduler.managerDashboard">
     <ContentPage.Content>
         <StackLayout>
+            <!-- Main App Logo -->
             <Image  Source="mainLogo.png"
                 WidthRequest="200"
            HorizontalOptions="Center"
            VerticalOptions="Start" />
+            <!-- Welcome message by the label -->
             <Label x:Name="wlcmMsg"
                HorizontalOptions="Center"
                VerticalOptions="Center"
@@ -16,6 +18,7 @@
                FontAttributes="Bold"
                FontSize="Large"
                Margin="10,10,10,30"/>
+            <!-- create schedule button -->
             <Button x:Name="createBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"
@@ -25,7 +28,8 @@
                 FontAttributes="Bold"
                 BackgroundColor="DeepSkyBlue"
                 CornerRadius="12"
-                    Clicked="createBtn_Clicked"/>
+                Clicked="createBtn_Clicked"/>
+            <!-- delete schedule button -->
             <Button x:Name="deleteBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"
@@ -35,7 +39,8 @@
                 FontAttributes="Bold"
                 BackgroundColor="DeepSkyBlue"
                 CornerRadius="12"
-                    Clicked="deleteBtn_Clicked"/>
+                Clicked="deleteBtn_Clicked"/>
+            <!-- show schedule button -->
             <Button x:Name="ShowBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"
@@ -45,7 +50,7 @@
                 FontAttributes="Bold"
                 BackgroundColor="DeepSkyBlue"
                 CornerRadius="12"
-                    Clicked="ShowBtn_Clicked"/>
+                Clicked="ShowBtn_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

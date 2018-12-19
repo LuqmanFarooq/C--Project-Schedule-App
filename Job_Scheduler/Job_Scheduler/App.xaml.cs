@@ -10,7 +10,7 @@ namespace Job_Scheduler
         public App()
         {
             InitializeComponent();
-
+            // shows splash screen on startup
             MainPage = new NavigationPage(new SplashScreen());
         }
 

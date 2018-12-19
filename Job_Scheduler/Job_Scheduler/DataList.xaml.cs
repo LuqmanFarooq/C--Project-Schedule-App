@@ -15,23 +15,28 @@ namespace Job_Scheduler
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DataList : ContentPage
 	{
+        // sqlite variable
         public SQLiteConnection conn;
         
         public DataList ()
 		{
 			InitializeComponent ();
+            // search bar initialization
             InitSearchBar();
+            // getting connection according to platform using interface
             conn = DependencyService.Get<ISQLite>().GetConnection();
+            // creating table in the database
             conn.CreateTable<Add_Schedule>();
             var data = (from add in conn.Table<Add_Schedule>() select add);
             Datalist.ItemsSource = data;
         }
-        
+        // searchbar functionality
         public void InitSearchBar()
         {
             dataSearch.TextChanged += (s, e) => FilterItem(dataSearch.Text);
             dataSearch.SearchButtonPressed += (s, e) => FilterItem(dataSearch.Text);
         }
+        // applying filters
         public void FilterItem(string filter)
         {
             var data = (from add in conn.Table<Add_Schedule>() select add);

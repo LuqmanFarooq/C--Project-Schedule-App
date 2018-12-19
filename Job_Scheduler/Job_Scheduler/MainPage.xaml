@@ -5,11 +5,12 @@
              x:Class="Job_Scheduler.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
+        <!-- main logo -->
         <Image  Source="mainLogo.png"
                 WidthRequest="200"
            HorizontalOptions="Center"
            VerticalOptions="Start" />
+        <!-- App name label -->
         <Label x:Name="appName"
                HorizontalOptions="Center"
                VerticalOptions="Center"
@@ -18,6 +19,7 @@
                FontAttributes="Bold"
                FontSize="Large"
                Margin="10,10,10,30"/>
+        <!-- manager login button -->
         <Button x:Name="mngrLoginBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"
@@ -28,10 +30,12 @@
                 BackgroundColor="DeepSkyBlue"
                 CornerRadius="12"
                 Clicked="mngrLoginBtn_Clicked"/>
+        
         <Label x:Name="orDivider"
                Text="______________or______________"
                TextColor="DimGray"
                HorizontalOptions="Center"/>
+        <!-- employee login button -->
         <Button x:Name="empLoginBtn"
                 Margin="10"
                 WidthRequest="200"

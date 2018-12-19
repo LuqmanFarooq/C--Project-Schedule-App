@@ -4,10 +4,12 @@
              x:Class="Job_Scheduler.employeeDashboard">
     <ContentPage.Content>
         <StackLayout>
+            <!-- Main App Logo -->
             <Image  Source="mainLogo.png"
                 WidthRequest="200"
            HorizontalOptions="Center"
            VerticalOptions="Start" />
+            <!-- Welcome message by the label -->
             <Label x:Name="wlcmMsg"
                HorizontalOptions="Center"
                VerticalOptions="Center"
@@ -16,6 +18,7 @@
                FontAttributes="Bold"
                FontSize="Large"
                Margin="10,10,10,30"/>
+            <!-- show schedule button -->
             <Button x:Name="ShowBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"

@@ -16,9 +16,10 @@ namespace Job_Scheduler
 		{
 			InitializeComponent ();
 		}
-
+        // show schedule button click event
         private void ShowBtn_Clicked(object sender, EventArgs e)
         {
+            // navigates to datalist page which shows all the records in a list view
             Navigation.PushAsync(new DataList());
         }
     }

@@ -9,6 +9,7 @@ using Xamarin.Forms;
 [assembly:Dependency(typeof(SQLite_droid))]
 namespace Job_Scheduler.Droid
 {
+    // sqlite android platform specific code 
     public class SQLite_droid : ISQLite
     {
         public SQLiteConnection GetConnection()

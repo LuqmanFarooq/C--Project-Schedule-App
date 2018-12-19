@@ -13,12 +13,12 @@ namespace Job_Scheduler
         {
             InitializeComponent();
         }
-
+        // Login as manager button navigates to manager login page
         private void mngrLoginBtn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new managerLoginCode());
         }
-
+        // Login as employee button navigates to employee login page
         private void empLoginBtn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new employeeLogin());

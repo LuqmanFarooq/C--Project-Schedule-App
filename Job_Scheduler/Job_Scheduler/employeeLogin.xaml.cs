@@ -16,21 +16,19 @@ namespace Job_Scheduler
 		{
 			InitializeComponent ();
 		}
-
+        // Login button clicked Functionality
         private void empLoginBtn_Clicked(object sender, EventArgs e)
         {
+            // empty entries validation
             bool isUserEmpty, isPwdEmpty;
             isUserEmpty = String.IsNullOrEmpty(empEmailInput.Text);
             isPwdEmpty = String.IsNullOrEmpty(empPasswordInput.Text);
-            
             if (isUserEmpty || isPwdEmpty)
             {
                 DisplayAlert("Error", "Email or Password cannot be empty", "Try Again");
             }
             else
             {
-                // check user/pwd hash keys etc
-                // navigate to new page
                 Navigation.PushAsync(new employeeDashboard());
             } // end if(isUserEmpty || isPwdEmpty)
         }

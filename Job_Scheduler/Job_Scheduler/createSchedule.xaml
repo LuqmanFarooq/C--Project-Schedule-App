@@ -4,6 +4,7 @@
              x:Class="Job_Scheduler.createSchedule">
     <ContentPage.Content>
         <StackLayout>
+            <!-- Create new Schedule label -->
             <Label x:Name="makeNew"
                HorizontalOptions="Center"
                VerticalOptions="Center"
@@ -12,7 +13,7 @@
                FontAttributes="Bold"
                FontSize="Large"
                Margin="10,10,10,30"/>
-
+            <!-- Employee name label -->
             <Label x:Name="empNameLbl"
                    Text="Employee Name:"
                    TextColor="Black"
@@ -20,11 +21,12 @@
                    FontSize="Small"
                    HorizontalOptions="Fill"
                    VerticalOptions="Center"/>
+            <!-- Employee name entry box -->
             <Entry x:Name="empNameBox" 
                    Placeholder="Enter Employee Name"
                    HorizontalOptions="Fill"
                    VerticalOptions="Center"/>
-
+            <!-- Date label -->
             <Label x:Name="dateLbl" 
                    Text="Date:"
                    TextColor="Black"
@@ -32,7 +34,9 @@
                    FontSize="Small"
                    HorizontalOptions="Fill"
                    VerticalOptions="Center"/>
+            <!-- Date picker -->
             <DatePicker x:Name="selectDate" />
+            <!-- Shift start time label -->
             <Label x:Name="timeFromLbl" 
                    Text="Shift Start Time"
                    TextColor="Black"
@@ -40,9 +44,11 @@
                    FontSize="Small"
                    HorizontalOptions="Fill"
                    VerticalOptions="Center"/>
+            <!-- shift start time picker -->
             <TimePicker x:Name="selectFromTime" 
                         HorizontalOptions="Fill"
                         VerticalOptions="Center"/>
+            <!-- Shift end time label -->
             <Label x:Name="timeToLbl" 
                    Text="Shift Finish Time"
                    TextColor="Black"
@@ -50,9 +56,11 @@
                    FontSize="Small"
                    HorizontalOptions="Fill"
                    VerticalOptions="Center"/>
+            <!-- Shift end time picker -->
             <TimePicker x:Name="selectToTime"
                         HorizontalOptions="Fill"
                         VerticalOptions="Center"/>
+            <!-- Add schedule Button to save record in database -->
             <Button x:Name="addScheduleBtn"
                 WidthRequest="200"
                 HorizontalOptions="Center"
@@ -62,7 +70,7 @@
                 FontAttributes="Bold"
                 BackgroundColor="DeepSkyBlue"
                 CornerRadius="12"
-                    Clicked="addScheduleBtn_Clicked"/>
+                Clicked="addScheduleBtn_Clicked"/>
                   </StackLayout>
     </ContentPage.Content>
 </ContentPage>

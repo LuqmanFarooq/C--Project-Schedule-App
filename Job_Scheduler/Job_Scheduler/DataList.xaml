@@ -4,12 +4,16 @@
              x:Class="Job_Scheduler.DataList">
     <ContentPage.Content>
         <StackLayout>
+            <!-- Please find your schedule label -->
             <Label x:Name="Schedule" Text="Please find your schedule in the list below" TextColor="DeepSkyBlue"/>
+            <!-- Search bar to search from list -->
             <SearchBar x:Name="dataSearch" Placeholder="Search name"/>
+            <!-- data list -->
             <ListView x:Name="Datalist" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <!-- binded data stack -->
                             <StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Name: " FontSize="Medium"/>

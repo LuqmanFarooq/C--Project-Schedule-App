@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Job_Scheduler
 {
+    // interface to get connection
     public interface ISQLite
     {
         SQLiteConnection GetConnection();   
